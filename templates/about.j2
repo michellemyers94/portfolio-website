@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {#    Adobe Font#}
+    <script>
+        (function (d) {
+            var config = {
+                    kitId: 'skg6ajc',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement, t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+                s = d.getElementsByTagName("script")[0], a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {
+                }
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    {#    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">#}
+</head>
+<body class="bg-custom-background font-sans text-custom-default-text">
+
+<div class="flex justify-between p-4 items center">
+
+    {#logo#}
+    <a href="{{ url_for('index') }}">
+        <div class="text-3xl px-16 py-4"><span class="text-custom-default-text font-bold">dev</span><span
+                class="text-custom-primary-accent font-bold">michelle</span></div>
+    </a>
+
+    <div class="text-2xl space-x-4 py-4 mr-16">
+        <a href="{{ url_for('index') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">home</a>
+        <a href="{{ url_for('about') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">about</a>
+        <a href="{{ url_for('portfolio') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">portfolio</a>
+        <a href="{{ url_for('contact') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">contact</a>
+    </div>
+</div>
+
+<div class="flex px-48 py-24">
+    <div><img src="/static/images/headshot.jpg" class="rounded-full border-8 border-custom-primary-accent"/> </div>
+    <div class="basis-1/2">
+        <div class="text-9xl">about <span class="text-custom-primary-accent font-bold">michelle</span></div>
+        <p class="px-2"><span class="text-custom-primary-accent text-2xl font-bold">Michelle</span> is <span class="text-custom-secondary-accent">developer</span> and <span class="text-custom-tertiary-accent">designer</span> based in the San Francisco Bay Area. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci, aspernatur atque commodi corporis, deleniti ducimus esse molestiae, mollitia nam natus obcaecati odit placeat quae quasi quidem sed unde vitae. </p>
+
+    </div>
+</div>
+
+<div class="flex flex-col items-center">
+
+<a href="/static/images/michelle-cusick-resume.pdf" target="_blank" download><button class="text-2xl bg-custom-primary-accent hover:bg-custom-primary-accent-darker hover:scale-105 text-custom-default-text font-bold px-8 py-2 rounded-lg transition ease-in duration-200">download resume ↓</button></a>
+</div>
+<div class="mt-16 border-2 border-custom-default-text rounded-lg mx-48"></div>
+
+</body>
+
+
+</html>
