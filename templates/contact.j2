@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {#    Adobe Font#}
+    <script>
+        (function (d) {
+            var config = {
+                    kitId: 'skg6ajc',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement, t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+                s = d.getElementsByTagName("script")[0], a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {
+                }
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    {#    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">#}
+</head>
+<body class="bg-custom-background font-sans text-custom-default-text">
+<div class="flex justify-between p-4 items center">
+
+    {#logo#}
+    <a href="{{ url_for('index') }}">
+        <div class="text-3xl px-16 py-4"><span class="text-custom-default-text font-bold">dev</span><span
+                class="text-custom-primary-accent font-bold">michelle</span></div>
+    </a>
+
+    <div class="text-2xl space-x-4 py-4 mr-16">
+        <a href="{{ url_for('index') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">home</a>
+        <a href="{{ url_for('about') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">about</a>
+        <a href="{{ url_for('portfolio') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">portfolio</a>
+        <a href="{{ url_for('contact') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">contact</a>
+    </div>
+</div>
+
+
+<h1 class="text-9xl text-center">contact</h1>
+</body>
+
+
+
+</html>
