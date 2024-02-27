@@ -45,7 +45,7 @@ def contact():
         mail.send(msg)
 
         flash('Message sent successfully!', 'success')
-        return render_template('contact.j2')
+        return redirect(url_for('index'))
     else:
         return render_template('contact.j2')
 
