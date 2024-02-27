@@ -46,17 +46,35 @@
     </a>
 
     <div class="text-2xl space-x-4 py-4 mr-16">
-        <a href="{{ url_for('index') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">home</a>
-        <a href="{{ url_for('about') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">about</a>
-        <a href="{{ url_for('portfolio') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">portfolio</a>
-        <a href="{{ url_for('contact') }}" class="hover:text-custom-primary-accent-darker transition ease-in duration-200">contact</a>
+        <a href="{{ url_for('index') }}"
+           class="hover:text-custom-primary-accent-darker transition ease-in duration-200">home</a>
+        <a href="{{ url_for('about') }}"
+           class="hover:text-custom-primary-accent-darker transition ease-in duration-200">about</a>
+        <a href="{{ url_for('portfolio') }}"
+           class="hover:text-custom-primary-accent-darker transition ease-in duration-200">portfolio</a>
+        <a href="{{ url_for('contact') }}"
+           class="hover:text-custom-primary-accent-darker transition ease-in duration-200">contact</a>
     </div>
 </div>
 
 
 <h1 class="text-9xl text-center">contact</h1>
-</body>
 
+
+<form class="flex flex-col w-full items-center " method="post">
+
+<label class="mt-16 text-2xl" for="name">Your Name:</label>
+    <input required type="text" class="form-input w-1/4 text-black" name="name" placeholder="Enter Your Name">
+
+    <label class="mt-4 text-2xl" for="name">Your Email:</label>
+    <input required type="text" class="form-input w-1/4 text-black" name="email" placeholder="Enter Your Email Address">
+
+    <label class="mt-4 text-2xl" for="message_body">Your Message:</label>
+    <textarea class="form-textarea w-1/4 text-black" name="message_body" placeholder="Enter Body Text"></textarea>
+
+    <input type="submit" value="Submit" class="mt-4 bg-custom-primary-accent hover:bg-custom-primary-accent-darker hover:scale-105 font-bold px-16 py-2 rounded-lg transition ease-in duration-200">
+</form>
+</body>
 
 
 </html>
